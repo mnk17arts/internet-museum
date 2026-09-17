@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="cyberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF"/>
+      <stop offset="50%" stop-color="#7000FF"/>
+      <stop offset="100%" stop-color="#FF007A"/>
+    </linearGradient>
+  </defs>
+  <!-- Retro CRT Monitor Frame -->
+  <rect x="6" y="8" width="52" height="40" rx="6" fill="#181824" stroke="url(#cyberGrad)" stroke-width="3"/>
+  <!-- Screen with Glowing Grid -->
+  <rect x="11" y="13" width="42" height="30" rx="3" fill="#0A0A12"/>
+  <!-- Classic Netscape/Globe Pixel Motif -->
+  <circle cx="32" cy="28" r="10" stroke="#00F0FF" stroke-width="2" fill="none" stroke-dasharray="2 2"/>
+  <path d="M 22 28 Q 32 20 42 28 Q 32 36 22 28 Z" fill="none" stroke="#FF007A" stroke-width="1.5"/>
+  <line x1="32" y1="18" x2="32" y2="38" stroke="#00F0FF" stroke-width="1.5"/>
+  <!-- Monitor Stand -->
+  <path d="M 26 48 L 22 56 L 42 56 L 38 48 Z" fill="#242436" stroke="url(#cyberGrad)" stroke-width="2"/>
+  <!-- Power LED -->
+  <circle cx="48" cy="44" r="1.5" fill="#39FF14"/>
+</svg>
