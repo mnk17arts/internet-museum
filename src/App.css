@@ -1,21 +1,114 @@
-/* App Specific Styles & Micro-Animations */
+/* App Specific Styles, Micro-Animations & Era Background Textures */
 
 .museum-grid-bg {
   background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
   background-size: 24px 24px;
 }
 
-.retro-scanlines-pattern {
-  background: linear-gradient(
-    to bottom,
-    rgba(255,255,255,0),
-    rgba(255,255,255,0) 50%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.3)
-  );
-  background-size: 100% 4px;
+/* ====================================================================
+   WHOLE-BODY THEME BACKGROUNDS (HISTORICALLY ACCURATE PER ERA)
+==================================================================== */
+
+/* Era 1: 1991-1995 Authentic CERN & NCSA Mosaic (Default Grey Canvas) */
+.era-dawn-root {
+  background-color: #bfbfbf !important;
+  color: #000000 !important;
+  font-family: 'Times New Roman', Times, serif !important;
 }
 
+/* Era 2: 1996-2000 Authentic Web 1.0 & Dot-Com Boom (Netscape / Warm Parchment & Tables) */
+.era-wildwest-root {
+  background-color: #ece9d8 !important;
+  color: #000000 !important;
+  font-family: Verdana, Arial, 'Comic Sans MS', sans-serif !important;
+  background-image:
+    radial-gradient(#dcd8c4 1px, transparent 1px) !important;
+  background-size: 16px 16px !important;
+}
+
+/* Era 3: 2001-2006 Authentic Web 2.0 Candy / Aqua / Flash Dawn (Clean Sky & White Canvas) */
+.era-flash-root {
+  background-color: #eaf2f8 !important;
+  color: #1a2a3a !important;
+  font-family: 'Trebuchet MS', Arial, Verdana, sans-serif !important;
+  background-image:
+    linear-gradient(180deg, #d4e6f5 0%, #eef5fb 250px, #eaf2f8 100%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Web 2.0 Glossy Candy Gel Button (Authentic 2004 reflections) */
+.web2-glossy-btn {
+  background: linear-gradient(180deg, #3895e8 0%, #2072c4 49%, #1459a3 50%, #1e6ebc 100%);
+  border: 1px solid #104e8b;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 2px 5px rgba(0, 51, 102, 0.3);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+.web2-glossy-orange {
+  background: linear-gradient(180deg, #ff9933 0%, #ff6600 49%, #cc4400 50%, #e65500 100%);
+  border: 1px solid #993300;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 2px 5px rgba(153, 51, 0, 0.3);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Era 4: 2007-2014 Authentic Skeuomorphic Era (iOS Linen, Stitched Leather & Brushed Metal) */
+.era-skeuomorphic-root {
+  background-color: #2b2d35 !important;
+  color: #ffffff !important;
+  font-family: 'Lucida Grande', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif !important;
+  /* Authentic iOS 4-6 Dark Crosshatch Woven Linen Texture */
+  background-image:
+    radial-gradient(rgba(255,255,255,0.06) 1px, transparent 0),
+    linear-gradient(45deg, rgba(0,0,0,0.2) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.2) 75%),
+    linear-gradient(45deg, rgba(0,0,0,0.2) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.2) 75%) !important;
+  background-size: 8px 8px, 4px 4px, 4px 4px !important;
+  background-position: 0 0, 0 0, 2px 2px !important;
+  background-attachment: fixed !important;
+}
+
+/* Skeuomorphic Stitched Seam */
+.skeuomorphic-stitch {
+  border: 1px dashed rgba(255, 255, 255, 0.35);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Skeuomorphic Letterpress Text Shadow */
+.text-letterpress-light {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+.text-letterpress-dark {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.9);
+}
+
+/* Skeuomorphic Glass Reflection Push Button */
+.skeuomorphic-glass-btn {
+  background: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.08) 49%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0.25) 100%), #3a75c4;
+  border: 1px solid #1c4b85;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 0 rgba(0,0,0,0.3), 0 2px 6px rgba(0,0,0,0.5);
+  text-shadow: 0 -1px 0 rgba(0,0,0,0.7);
+}
+
+/* Era 5: 2015-2020 Flat Material Design */
+.era-flat-root {
+  background-color: #0f121a !important;
+  color: #f1f5f9 !important;
+  font-family: 'Inter', Roboto, sans-serif !important;
+}
+
+/* Era 6: 2021-2026 Spatial Canvas & Cyberpunk Mesh */
+.era-cyber-root {
+  background-color: #040409 !important;
+  color: #f8fafc !important;
+  font-family: 'Space Grotesk', 'Outfit', sans-serif !important;
+  background-image:
+    radial-gradient(at 10% 10%, rgba(6, 182, 212, 0.16) 0px, transparent 50%),
+    radial-gradient(at 90% 90%, rgba(16, 185, 129, 0.14) 0px, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(112, 0, 255, 0.12) 0px, transparent 60%) !important;
+  background-attachment: fixed !important;
+}
+
+/* Glitter animation for MySpace */
 .glitter-sparkle {
   position: absolute;
   pointer-events: none;

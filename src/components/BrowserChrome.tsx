@@ -6,7 +6,6 @@ export type BrowserType = 'mosaic' | 'netscape' | 'ie6' | 'chrome';
 
 interface BrowserChromeProps {
   browserType: BrowserType;
-  onBrowserChange: (type: BrowserType) => void;
   urlDisplay?: string;
   eraName?: string;
   children: ReactNode;
@@ -14,9 +13,7 @@ interface BrowserChromeProps {
 
 export function BrowserChrome({
   browserType,
-  onBrowserChange,
   urlDisplay = 'http://internet-museum.hypertext/exhibition',
-  eraName = 'CYBERSPACE TIME CAPSULE',
   children,
 }: BrowserChromeProps) {
   const handleReload = () => {
@@ -25,75 +22,7 @@ export function BrowserChrome({
 
   return (
     <div className="w-full flex flex-col rounded-xl overflow-hidden shadow-2xl transition-all duration-300 border border-slate-700/60 bg-[#0c0c16]">
-      {/* Top Browser Selector Switcher Bar (Mobile & Desktop Accessible) */}
-      <div className="bg-[#12121e] border-b border-slate-800 px-3 py-2 flex flex-wrap items-center justify-between gap-2 text-xs">
-        <div className="flex items-center gap-2">
-          <span className="text-slate-400 font-mono flex items-center gap-1">
-            <Globe className="w-3.5 h-3.5 text-cyan-400" />
-            <span className="hidden sm:inline">VIEWPORT CHROME:</span>
-          </span>
-          <div className="inline-flex rounded-lg p-0.5 bg-slate-900 border border-slate-800">
-            <button
-              onClick={() => {
-                retroAudio.playKeyClick();
-                onBrowserChange('mosaic');
-              }}
-              className={`px-2.5 py-1 rounded text-xs font-pixel tracking-wider transition-colors ${
-                browserType === 'mosaic'
-                  ? 'bg-amber-600/30 text-amber-300 font-bold border border-amber-500/40'
-                  : 'text-slate-400 hover:text-slate-200'
-              }`}
-            >
-              Mosaic '93
-            </button>
-            <button
-              onClick={() => {
-                retroAudio.playKeyClick();
-                onBrowserChange('netscape');
-              }}
-              className={`px-2.5 py-1 rounded text-xs font-retro transition-colors ${
-                browserType === 'netscape'
-                  ? 'bg-fuchsia-600/30 text-fuchsia-300 font-bold border border-fuchsia-500/40'
-                  : 'text-slate-400 hover:text-slate-200'
-              }`}
-            >
-              Netscape 3.0
-            </button>
-            <button
-              onClick={() => {
-                retroAudio.playKeyClick();
-                onBrowserChange('ie6');
-              }}
-              className={`px-2.5 py-1 rounded text-xs font-sans transition-colors ${
-                browserType === 'ie6'
-                  ? 'bg-blue-600/30 text-blue-300 font-bold border border-blue-500/40'
-                  : 'text-slate-400 hover:text-slate-200'
-              }`}
-            >
-              IE6 XP
-            </button>
-            <button
-              onClick={() => {
-                retroAudio.playKeyClick();
-                onBrowserChange('chrome');
-              }}
-              className={`px-2.5 py-1 rounded text-xs font-mono transition-colors ${
-                browserType === 'chrome'
-                  ? 'bg-cyan-600/30 text-cyan-300 font-bold border border-cyan-500/40'
-                  : 'text-slate-400 hover:text-slate-200'
-              }`}
-            >
-              Modern Chrome
-            </button>
-          </div>
-        </div>
 
-        <div className="flex items-center gap-2 font-mono text-[11px] text-slate-400">
-          <span className="hidden md:inline px-2 py-0.5 rounded bg-slate-800/80 text-cyan-400 border border-slate-700">
-            {eraName}
-          </span>
-        </div>
-      </div>
 
       {/* 1. NCSA MOSAIC 1993 CHROME */}
       {browserType === 'mosaic' && (
